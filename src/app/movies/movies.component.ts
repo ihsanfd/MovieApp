@@ -8,6 +8,7 @@ import { MovieRepository } from '../models/movie.repository';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent{
+  title = 'Film Listesi';
   movies: Movie[];
   movieRepository: MovieRepository;
 

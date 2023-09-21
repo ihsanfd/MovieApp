@@ -1,3 +1,13 @@
+<div *ngIf="movies.length==0;">
+    <h1>{{title}}</h1>
+</div>
+<div class="alert alert-warning" *ngIf="movies.length==0">
+    <h1>Film bulunamadı</h1>
+</div>
+<div class="alert alert-warning" *ngIf="movies.length>0">
+    <h1>{{movies.length}} tane film var.</h1>
+</div>    
+
 <div class="card mb-3" *ngFor="let item of movies">
     <div class="row">
         <div class="col-md-3">
@@ -12,9 +22,3 @@
         </div>    
     </div>
 </div>
-
-<!-- <app-movie *ngFor="let  item of movies"></app-movie> -->
-
-<!-- <ul>
-    <li *ngFor="let item of movies">{{ item }}</li>
-</ul>     -->
