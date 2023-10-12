@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Movie } from '../models/movie';
 import { MovieRepository } from '../models/movie.repository';
+import { AlertifyService } from '../services/alertify.service';
+
+
 
 @Component({
   selector: 'app-movies',
@@ -16,7 +19,7 @@ export class MoviesComponent{
 
   filterText:string = 'deneme';
 
-  constructor(){
+  constructor(private alertify:AlertifyService){
     this.movieRepository = new MovieRepository();
     this.movies = this.movieRepository.getMovies();
     this.popularMovies = this.movieRepository.getPopularMovies();
@@ -26,10 +29,13 @@ export class MoviesComponent{
       $event.target.classList.remove('btn-primary');
       $event.target.classList.add('btn-danger');
       $event.target.innerText = 'Listede';
+      this.alertify.success(movie.title + ' listeye eklendi.');
     } else {
       $event.target.classList.remove('btn-danger');
       $event.target.classList.add('btn-primary');
       $event.target.innerText = 'Listeye Ekle';
+
+      this.alertify.error(movie.title + ' listeden çıkarıldı.');
     }
   }
 }
