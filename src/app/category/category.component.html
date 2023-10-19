@@ -7,5 +7,5 @@
     <a *ngFor="let item of categories" 
     [class.active]="!displayAll && selectedCategory?.id == item.id"
     (click)="selectCategory(item)"
-    class="list-group-item list-group-item-action active">{{item.name}}</a>
+    class="list-group-item list-group-item-action active">{{item.name | titlecase}}</a>
 </div>

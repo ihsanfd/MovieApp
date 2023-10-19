@@ -4,14 +4,15 @@
         {"id": 2, "title": "film 2", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "2.jpeg"},
         {"id": 3, "title": "film 3", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "3.jpeg"},
         {"id": 4, "title": "film 4", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "4.jpeg"},
-        {"id": 5, "title": "film 5", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "5.jpeg"}
+        {"id": 5, "title": "film 5", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "5.jpeg"},
+        {"id": 6, "title": "film 6", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "1.jpeg"}
             
     ],
     "categories":[
-        {"id": 1, "title": "Macera"},
-        {"id": 2, "title": "Romantik"},
-        {"id": 3, "title": "Komedi"},
-        {"id": 4, "title": "Dram"},
-        {"id": 5, "title": "Savaş"}
+        {"id": 1, "name": "Macera"},
+        {"id": 2, "name": "Romantik"},
+        {"id": 3, "name": "Komedi"},
+        {"id": 4, "name": "Dram"},
+        {"id": 5, "name": "Savaş"}
     ]
 }
