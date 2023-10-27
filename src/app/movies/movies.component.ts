@@ -18,9 +18,10 @@ export class MoviesComponent{
   FilteredMovies: Movie[]=[];
 
   filterText:string = "";
+  error:any = "";
 
-  constructor(private alertify:AlertifyService, 
-              private movieService:MovieService){
+  constructor(private alertify: AlertifyService, 
+              private movieService: MovieService){
     //constructor içine yazdığın parametreleri inject edersin.
     //classın içerisinde movie service bu şekilde erişebilirsin.
   }
@@ -32,9 +33,7 @@ export class MoviesComponent{
       //gelen datayı al nereye eklemene gerektiği yere ekle.
       // async olduğu için subscribe kullanmamız gerek
 
-      console.log(this.movies);
-      console.log(this.FilteredMovies);
-    });
+    }, error => this.error = error);
   }
 
 
