@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Movie } from '../models/movie';
 import { AlertifyService } from '../services/alertify.service';
 import { MovieService } from '../services/movie.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -21,19 +22,24 @@ export class MoviesComponent{
   error:any = "";
 
   constructor(private alertify: AlertifyService, 
-              private movieService: MovieService){
+              private movieService: MovieService,
+              private activatedRoute: ActivatedRoute){
     //constructor içine yazdığın parametreleri inject edersin.
     //classın içerisinde movie service bu şekilde erişebilirsin.
   }
 
   ngOnInit(): void {
-    this.movieService.getMovies().subscribe(data => {
-      this.movies = data;
-      this.FilteredMovies = this.movies;
-      //gelen datayı al nereye eklemene gerektiği yere ekle.
-      // async olduğu için subscribe kullanmamız gerek
-
-    }, error => this.error = error);
+    this.activatedRoute.params.subscribe(params => {
+      this.movieService.getMovies(params["categoryId"]).subscribe(data => {
+        this.movies = data;
+        this.FilteredMovies = this.movies;
+        //gelen datayı al nereye eklemene gerektiği yere ekle.
+        // async olduğu için subscribe kullanmamız gerek
+  
+      }, error => {
+        this.error = error;
+      });
+    });
   }
 
 
