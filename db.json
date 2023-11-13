@@ -1,18 +1,76 @@
 {
-    "movies":[
-        {"id": 1, "title": "film 1", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "1.jpeg", "categoryId": 1},
-        {"id": 2, "title": "film 2", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "2.jpeg", "categoryId": 2},
-        {"id": 3, "title": "film 3", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "3.jpeg", "categoryId": 3},
-        {"id": 4, "title": "film 4", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "4.jpeg", "categoryId": 3},
-        {"id": 5, "title": "film 5", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "5.jpeg", "categoryId": 4},
-        {"id": 6, "title": "film 6", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "imageUrl": "1.jpeg", "categoryId": 4}
-            
-    ],
-    "categories":[
-        {"id": 1, "name": "Macera"},
-        {"id": 2, "name": "Romantik"},
-        {"id": 3, "name": "Komedi"},
-        {"id": 4, "name": "Dram"},
-        {"id": 5, "name": "Savaş"}
-    ]
+  "movies": [
+    {
+      "id": 1,
+      "title": "film 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imageUrl": "1.jpeg",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "title": "film 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imageUrl": "2.jpeg",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "title": "film 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imageUrl": "3.jpeg",
+      "categoryId": 3
+    },
+    {
+      "id": 4,
+      "title": "film 4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imageUrl": "4.jpeg",
+      "categoryId": 3
+    },
+    {
+      "id": 5,
+      "title": "film 5",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imageUrl": "5.jpeg",
+      "categoryId": 4
+    },
+    {
+      "id": 6,
+      "title": "film 6",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imageUrl": "1.jpeg",
+      "categoryId": 4
+    },
+    {
+      "id": 7,
+      "title": "dsadasd",
+      "description": " asdasd",
+      "imageUrl": "1.jpg",
+      "isPopular": false,
+      "datePublished": 1699888110175
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Macera"
+    },
+    {
+      "id": 2,
+      "name": "Romantik"
+    },
+    {
+      "id": 3,
+      "name": "Komedi"
+    },
+    {
+      "id": 4,
+      "name": "Dram"
+    },
+    {
+      "id": 5,
+      "name": "Savaş"
+    }
+  ]
 }

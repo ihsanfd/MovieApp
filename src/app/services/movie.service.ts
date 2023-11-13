@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { Movie } from '../models/movie';
@@ -30,6 +30,19 @@ export class MovieService {
             catchError(this.handleError)
         );
     } 
+
+    createMovie(movie:Movie): Observable<Movie> {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-type': 'application/json',
+                'Authorization': 'Token'
+            })
+        }
+        return this.http.post<Movie>(this.url, movie).pipe(
+            tap(data => console.log(data)),
+            catchError(this.handleError)
+        );
+    }
     private handleError(error: HttpErrorResponse) {
         if(error.error instanceof ErrorEvent) {
             //client yada network tarafında oluşan hatalar
