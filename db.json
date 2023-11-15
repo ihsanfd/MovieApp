@@ -44,11 +44,11 @@
     },
     {
       "id": 7,
-      "title": "dsadasd",
-      "description": " asdasd",
-      "imageUrl": "1.jpg",
+      "title": "film adı",
+      "description": "açıklama",
+      "imageUrl": "1.jpeg",
       "isPopular": false,
-      "datePublished": 1699888110175
+      "datePublished": 1700072582274
     }
   ],
   "categories": [
