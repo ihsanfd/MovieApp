@@ -36,10 +36,14 @@ export class MovieCreateComponent {
     }
     movieForm = new FormGroup({
     title: new FormControl("",[Validators.required, Validators.minLength(5), Validators.maxLength(20)]),
-    description: new FormControl(""),
-    imageUrl: new FormControl(""),
-    categoryId: new FormControl("")
+    description: new FormControl("",[Validators.required]),
+    imageUrl: new FormControl("",[Validators.required]),
+    categoryId: new FormControl("",[Validators.required])
   });
+
+    get title(){
+      return this.movieForm.get('title');
+    }
 
     clearForm() {
       this.movieForm.patchValue({
