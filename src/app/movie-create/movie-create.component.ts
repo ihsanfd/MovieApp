@@ -4,7 +4,8 @@ import { CategoryService } from '../services/category.service';
 import { MovieService } from '../services/movie.service';
 import { Router } from '@angular/router';
 import { AlertifyService } from '../services/alertify.service';
-import { NgForm, NgModel } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, NgModel, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movie-create',
@@ -33,7 +34,24 @@ export class MovieCreateComponent {
         this.categories = data;
       }); 
     }
+    movieForm = new FormGroup({
+    title: new FormControl("",[Validators.required, Validators.minLength(5), Validators.maxLength(20)]),
+    description: new FormControl(""),
+    imageUrl: new FormControl(""),
+    categoryId: new FormControl("")
+  });
+
+    clearForm() {
+      this.movieForm.patchValue({
+      title: '',
+      description: '',
+      imageUrl: '',
+      categoryId: ''
+      });
+    }
     createMovie() {
+      console.log(this.movieForm.value.title);
+
       // createMovie(title:any, description:any, imageUrl:any, categories:any) {
       // if (title.value === '' || description.value === '' || imageUrl.value === '' || categories.value === '-1') {
       //   this.alertify.error('Lütfen bütün boşlukları doldurunuz.');
@@ -58,19 +76,19 @@ export class MovieCreateComponent {
       //   return;
       // }
 
-      const movie = { 
-        id: 0,
-        title: this.model.title,
-        description: this.model.description,
-        imageUrl: this.model.imageUrl,
-        isPopular: false,
-        datePublished: new Date().getTime(),
-        categoryId: this.model.categories
-      };
+      // const movie = { 
+      //   id: 0,
+      //   title: this.model.title,
+      //   description: this.model.description,
+      //   imageUrl: this.model.imageUrl,
+      //   isPopular: false,
+      //   datePublished: new Date().getTime(),
+      //   categoryId: this.model.categories
+      // };
 
-      this.movieService.createMovie(movie).subscribe(data =>
-        this.router.navigate(['/movies', data.id])
-      );
+      // this.movieService.createMovie(movie).subscribe(data =>
+      //   this.router.navigate(['/movies', data.id])
+      // );
 
     }
 
